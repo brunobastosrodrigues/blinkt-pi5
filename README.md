@@ -2,9 +2,9 @@
 
 Patched [Blinkt!](https://shop.pimoroni.com/products/blinkt) Python library for **Raspberry Pi 5**.
 
-The official `blinkt` library uses `RPi.GPIO`, which does not work on the Pi 5 (RP1 chip). This fork replaces it with `lgpio`.
+Based on the [original Pimoroni blinkt library](https://github.com/pimoroni/blinkt). The upstream library uses `RPi.GPIO`, which does not work on the Pi 5 (RP1 chip). This fork replaces it with `lgpio`.
 
-## Changes from upstream
+## Changes from [upstream](https://github.com/pimoroni/blinkt)
 
 - Replaced `RPi.GPIO` with `lgpio` for GPIO access
 - Fixed `gpio_write()` calls to pass strict `0`/`1` values (lgpio rejects truthy/falsy)
